@@ -1,0 +1,54 @@
+<md-card id="weather-card" ng-cloak>
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">{{$ctrl.city}}</span>
+      <span class="md-subhead">最低温度: {{$ctrl.lowTmp}}&#8451;</span>
+      <span class="md-subhead">最高温度: {{$ctrl.highTmp}}&#8451;</span>
+      <span class="md-subhead">空气质量: {{$ctrl.qlty}}</span>
+    </md-card-title-text>
+    <md-card-title-media>
+      <div class="md-media-lg card-media"></div>
+    </md-card-title-media>
+  </md-card-title>
+  <md-divider></md-divider>
+  <md-card-content class="content" layout="row" layout-align="center center">
+    <div class="daily" ng-repeat="day in $ctrl.daily" flex>
+      <div class="date">{{day.date | date:"EEE"}}</div>
+      <div class="tmp">{{day.cond.txt_d}} | {{day.tmp.min}}-{{day.tmp.max}} &#8451;</div>
+    </div>
+  </md-card-content>
+</md-card>
+
+<style>
+#weather-card .card-media{
+  background-color: lightgray;
+  width: 120px;
+  height: 120px
+}
+
+#weather-card .content{
+  height: 120px;
+  padding-bottom: 0px;
+}
+
+#weather-card .daily{
+  font-size: 12px;
+  position: relative;
+  height: 80px;
+}
+
+#weather-card .daily > div{
+  position: absolute;;
+}
+
+#weather-card .daily .date{
+  top:0;
+  left:0;
+}
+
+#weather-card .daily .tmp{
+  bottom: 0;
+  left: 0;
+}
+
+</style>

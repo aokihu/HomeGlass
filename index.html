@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://cdn.bootcss.com/moment.js/2.10.6/moment.min.js"></script>
+    <!-- 加载Angular库 -->
+    <script src="http://cdn.bootcss.com/angular.js/1.5.7/angular.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.5.7/i18n/angular-locale_zh-cn.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.5.7/angular-animate.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.5.7/angular-aria.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.5.7/angular-messages.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular-material/1.1.0-rc4/angular-material.min.js"></script>
+    <!-- 加载样式表 -->
+    <link href="http://cdn.bootcss.com/angular-material/1.1.0-rc4/angular-material.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/material-design-icons/2.2.3/iconfont/material-icons.css" rel="stylesheet">
+    <!-- 加载本地库文件  -->
+    <script src="configure.js"></script>
+    <script src="libs/srvs/message.js"></script>
+    <script src="libs/comps/weatherCard.js"></script>
+    <script src="libs/comps/messagesCard.js"></script>
+    <script src="libs/comps/switchsCard.js"></script>
+    <script src="libs/comps/toolbar.js"></script>
+    <script src="libs/comps/clock.js"></script>
+    <script src="index.js"></script>
+
+  </head>
+  <body ng-app="HomeGlassApp" ng-cloak layout='column'>
+    <toolbar></toolbar>
+    <div layout="row" flex>
+      <div layout="column" flex=50>
+        <weather-card></weather-card>
+        <messages-card flex></messages-card>
+      </div>
+      <div layout="column" flex=50>
+        <switchs-card></switchs-card>
+        <music-card></music-card>
+      </div>
+    </div>
+  </body>
+</html>
