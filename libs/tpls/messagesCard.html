@@ -1,25 +1,39 @@
-<md-card id="messagesCard">
+<md-card id="messagesCard" layout="column">
   <md-card-title>
     <md-card-title-text>
       <span class="md-headline">消息</span>
     </md-card-title-text>
   </md-card-title>
-  <md-card-content>
+  <md-content class="content">
     <div ng-if="$ctrl.messages.length == 0">暂无消息</div>
-    <md-list ng-if="$ctrl.messages.length > 0" flex>
-      <md-list-item ng-repeat="msg in $ctrl.messages" class="type type-alarm">
+    <md-list ng-if="$ctrl.messages.length > 0" class="list">
+      <md-list-item ng-repeat="msg in $ctrl.messages" class="type" ng-class="msg.type">
         {{msg.text}}
       </md-list-item>
     </md-list>
-  </md-card-content>
+  </md-content>
 </md-card>
 
 <style>
-#messagesCard .type{
-  border-left: 2px solid;
+#messagesCard .content{
+  height: 300px;
 }
 
-#messagesCard .type-alarm{
-  border-color: lightgreen
+#messagesCard .content .list{
+  padding: 0;
+}
+
+#messagesCard .type{
+  border-left: 3px solid;
+}
+
+#messagesCard .type.alarm{
+  border-color: lightgreen;
+  background-color: rgba(0,255,0,0.05)
+}
+
+#messagesCard .type.medicine{
+  border-color: orange;
+  background-color: rgba(255,255,0, 0.05)
 }
 </style>
