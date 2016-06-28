@@ -1,7 +1,9 @@
 <md-card id="messagesCard" layout="column">
   <md-card-title>
-    <md-card-title-text>
-      <span class="md-headline">消息</span>
+    <md-card-title-text layout="row">
+      <span class="md-headline"><md-icon>message</md-icon> 消息</span>
+      <span flex></span>
+      <list-menu width="4" icon="menu" menus="$ctrl.menus" on-click="$ctrl.clickMenu(tabIndex)"></list-menu>
     </md-card-title-text>
   </md-card-title>
   <md-content class="content">

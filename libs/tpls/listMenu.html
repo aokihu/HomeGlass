@@ -1,0 +1,13 @@
+<md-menu ng-cloak md-position-mode="target-right target">
+  <md-button class="md-icon-button" aria-label="More" ng-click="$ctrl.openMenu($mdOpenMenu,$event)">
+    <md-icon>{{$ctrl.icon}}</md-icon>
+  </md-button>
+  <md-menu-content width="{{$ctrl.width}}">
+    <md-menu-item ng-repeat="item in $ctrl.menus">
+      <md-button ng-click="$ctrl._click(item.tab)">
+        <md-icon md-menu-align-target>{{item.icon}}</md-icon>
+        {{item.title}}
+      </md-button>
+    </md-menu-item>
+  </md-menu-content>
+</md-menu>

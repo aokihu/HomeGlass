@@ -7,6 +7,7 @@ HomeGlassApp
 MessageService(HomeGlassApp);
 ClockComp(HomeGlassApp);
 
+ListMenuComp(HomeGlassApp);
 MusicCardComp(HomeGlassApp);
 MessagesCardComp(HomeGlassApp);
 WeatherCardComp(HomeGlassApp);

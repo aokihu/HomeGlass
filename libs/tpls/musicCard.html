@@ -1,7 +1,33 @@
-<md-card>
+<md-card id="musicCard">
   <md-card-title>
-    <md-card-title-text>
-      <span class="md-headline">音乐中心</span>
+    <md-card-title-text layout="row">
+      <span class="md-headline">
+        <md-icon>music_note</md-icon>
+        音乐中心</span>
+        <span flex></span>
+        <list-menu icon="menu"
+                    menus="$ctrl.menus"
+                    width="3"
+                    on-click="$ctrl.clickMenu(tabIndex)">
+        </list-menu>
+
     </md-card-title-text>
   </md-card-title>
+  <md-divider></md-divider>
+  <md-card-content>
+    <div layout="row">
+
+    </div>
+    <div layout="row">
+      <md-button class="md-fab md-primary" aria-label="Play">
+        <md-icon class="icon-btn">play_arrow</md-icon>
+      </md-button>
+    </div>
+  </md-card-content>
 </md-card>
+
+<style>
+#musicCard .icon-btn{
+  font-size: 300%;
+}
+</style>
