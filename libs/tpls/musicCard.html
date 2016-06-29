@@ -14,11 +14,17 @@
     </md-card-title-text>
   </md-card-title>
   <md-divider></md-divider>
-  <md-card-content>
+  <md-card-content layout="column" class="content">
     <div layout="row">
-
+      <div class="md-media-lg card-media"></div>
+      <span flex="5"></span>
+      <md-slider-container flex>
+        <md-slider flex min="0" max="100" ng-model="color.red" aria-label="red" id="red-slider">
+        </md-slider>
+      </md-slider-container>
     </div>
-    <div layout="row">
+    <div flex="5"></div>
+    <div layout="row" flex>
       <md-button class="md-fab md-primary" aria-label="Play">
         <md-icon class="icon-btn">play_arrow</md-icon>
       </md-button>
@@ -29,5 +35,15 @@
 <style>
 #musicCard .icon-btn{
   font-size: 300%;
+}
+
+#musicCard .content{
+  height: 300px;
+}
+
+#musicCard .card-media{
+  width: 120px;
+  height: 120px;
+  background-color: lightgray
 }
 </style>
